@@ -23,3 +23,10 @@ var canConstruct = function (ransomNote, magazine) {
       return true;
     };
 console.log(canConstruct('aa','aab'))
+// second way
+const canConstruct =(ransomNote,magazine)=>{
+    for (let char of magazine){
+   ransomNote = ransomNote.replace(char,'')
+    }
+    return ransomNote ? false : true
+}
